@@ -4,55 +4,10 @@
     <meta charset="UTF-8">
     <title>Calculadora de Edad</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/estilo.css') }}" rel="stylesheet">
 
-    <style>
-        body {
-            background-color: #000000; /* Fondo negro */
-            font-family: Arial, Helvetica, sans-serif; /* Fuente profesional */
-        }
 
-        .edad-card {
-            max-width: 500px;
-            margin: 80px auto;
-            padding: 30px;
-            border-radius: 0; /* Sin bordes redondeados */
-            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1); /* sombra sutil blanca para contraste */
-            background-color: #1a1a1a; /* Fondo oscuro para la tarjeta */
-            color: #ffffff; /* Texto blanco */
-        }
-
-        h1 {
-            text-align: center;
-            font-weight: bold;
-            margin-bottom: 25px;
-            color: #4dabf7; /* azul claro para buen contraste */
-        }
-
-        .btn-primary {
-            background-color: #4dabf7; /* botón azul claro */
-            border: none;
-            color: #000000; /* texto negro en botón para contraste */
-        }
-
-        .btn-primary:hover {
-            background-color: #228be6; /* azul más oscuro en hover */
-        }
-
-        label {
-            color: #ffffff; /* etiquetas blancas */
-        }
-
-        input.form-control {
-            background-color: #333333; /* fondo oscuro para inputs */
-            color: #ffffff; /* texto blanco en inputs */
-            border-radius: 0; /* sin bordes redondeados */
-            border: 1px solid #4dabf7; /* borde azul claro */
-        }
-
-        input.form-control::placeholder {
-            color: #bbbbbb;
-        }
-    </style>
+   
 </head>
 <body>
 
