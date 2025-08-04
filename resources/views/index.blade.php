@@ -30,14 +30,25 @@
         @csrf
         <div class="mb-3">
             <label for="nombre" class="form-label">Tu nombre:</label>
-            <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingresa tu nombre" value="{{ old('nombre') }}">
+
+
+           
+            <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingresa tu nombre" value="{{ old('nombre') }}" required pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$" title="Solo se permiten letras y espacios">
+          
         </div>
 
-        <div class="mb-3">
-            <label for="fecha_nacimiento" class="form-label">Fecha de nacimiento:</label>
-            <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" class="form-control" value="{{ old('fecha_nacimiento') }}">
-        </div>
-
+       <div class="mb-3">
+    <label for="fecha_nacimiento" class="form-label">Fecha de nacimiento:</label>
+   <input 
+    type="date" 
+    name="fecha_nacimiento" 
+    id="fecha_nacimiento" 
+    class="form-control" 
+    value="{{ old('fecha_nacimiento') }}"
+    max="{{ date('Y-m-d') }}"  {{-- Esto limita la fecha máxima al día de hoy --}}
+    required
+>
+</div>
         <div class="d-grid">
             <button type="submit" class="btn btn-primary">Calcular edad</button>
         </div>
